@@ -1,35 +1,26 @@
-const returnFirstTwoDrivers = function(drivers) {
-	let firstTwo = [];
-	first = drivers[0];
-	second = drivers[1];
-	firstTwo.push(`${first}`);
-	firstTwo.push(`${second}`);
-	return firstTwo;
+const returnFirstTwoDrivers = function (drivers){
+     return drivers.slice(0, 2)
 }
 
-const returnLastTwoDrivers = function(drivers) {
-	return drivers.slice(drivers.length - 2, drivers.length);
-}
+ 
+ const returnLastTwoDrivers = function (drivers){
+    return drivers.slice(2, 4)
+ }
 
-const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
+ const selectingDrivers = 
+  [returnFirstTwoDrivers,
+  returnLastTwoDrivers]
 
-function createFareMultiplier (integer) {
-  	return function squared(fare){
-  		const multipied = integer * fare;
-  		return multipied;
-  	};
-}
+ const createFareMultiplier = function (integer){
+  return function (num){
+    return num * (integer)
+  }
+ }
 
-function fareDoubler (fare) {
-	const doubled = createFareMultiplier(2);
-	return doubled(fare);
-}
+ const fareDoubler = createFareMultiplier(2)
 
-function fareTripler (fare) {
-	const tripled = createFareMultiplier(3);
-	return tripled(fare);
-}
+ const fareTripler = createFareMultiplier(3)
 
-function fetchSpecifiedDrivers(drivers,funcName) {
- return funcName(drivers);
-}
+ const selectDifferentDrivers = function(drivers, returndrivers){
+   return returndrivers(drivers)
+ }
